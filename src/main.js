@@ -7,6 +7,8 @@ import VueI18n from 'vue-i18n'
 import './common/js/filter'
 import './common/js/mixin'
 import './assets/css/normalize.css' 
+import  store  from './store/index.js'
+
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
         FastClick.attach(document.body);
@@ -48,5 +50,6 @@ const i18n = new VueI18n({
 new Vue({
     router,
     i18n,
+    store,
     render: h => h(App),
 }).$mount('#app')
