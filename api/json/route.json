@@ -1,0 +1,417 @@
+{
+    "getTopFive": {
+      "code": "200",
+      "msg": "Successful",
+      "data": [{
+        "code": "Bitcoin",
+        "price": "8234.23",
+        "change": "up",
+        "exchangeList": [{
+            "name": "JPY",
+            "price": "1223.40"
+          },
+          {
+            "name": "KRW",
+            "price": "789321.09"
+          },
+          {
+            "name": "RUB",
+            "price": "234323.89"
+          }
+        ],
+        "marketTrend": ["399", "260", "255", "218", "232"]
+      },{
+        "code": "Bitcoin",
+        "price": "8234.23",
+        "change": "up",
+        "exchangeList": [{
+            "name": "JPY",
+            "price": "1223.40"
+          },
+          {
+            "name": "KRW",
+            "price": "789321.09"
+          },
+          {
+            "name": "RUB",
+            "price": "234323.89"
+          }
+        ],
+        "marketTrend": ["399", "260", "255", "218", "232"]
+      }]
+    },
+    "getTopCoinsList": {
+      "说明": "",
+      "code": "200",
+      "msg": "Successful",
+      "data": {
+        "lists": [
+          {
+            "id": 1,
+            "name": "BTC",
+            "price": "11111111111383.18",
+            "changeStat": "up",
+            "changeValue": "0",
+            "cap": "946.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "name": "BTC",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "cap": "956.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "name": "BTC",
+            "price": "1383.18",
+            "changeStat": "down",
+            "changeValue": "-2.23",
+            "cap": "936.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "name": "BTC",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "cap": "986.05",
+            "volume": "956.05"
+          }
+        ]
+      }
+    },
+    "getCurrencyTypeList": {
+      "code": "200",
+      "msg": "Successful",
+      "data": {
+        "lists": [
+          {
+            "id": 1,
+            "logo": "",
+            "name": "BTC"
+          },
+          {
+            "id": 1,
+            "logo": "",
+            "name": "BTC"
+          },
+          {
+            "id": 1,
+            "logo": "",
+            "name": "BTC"
+          }
+        ]
+      }
+    },
+    "getExchangeList": {
+      "code": "200",
+      "msg": "Successful",
+      "data": {
+        "lists": [
+          {
+            "id": 1,
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "high": "957.05",
+            "low": "950.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "high": "957.05",
+            "low": "950.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "high": "957.05",
+            "low": "950.05",
+            "volume": "956.05"
+          },
+          {
+            "id": 1,
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "down",
+            "changeValue": "-2.23",
+            "high": "957.05",
+            "low": "950.05",
+            "volume": "956.05"
+          }
+        ]
+      }
+    },
+    "getGainersList": {
+      "code": "200",
+      "msg": "Successful",
+      "data": {
+        "lists": [
+          {
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "cap": "620.88",
+            "volume": "956.05"
+          },
+          {
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "cap": "620.88",
+            "volume": "956.05"
+          },
+          {
+            "logo": "",
+            "name": "Bithumb",
+            "price": "1383.18",
+            "changeStat": "up",
+            "changeValue": "2.23",
+            "cap": "620.88",
+            "volume": "956.05"
+          }
+        ]
+      }
+    },
+    "getGainersMiniList": {
+      "code": "200",
+      "msg": "Successful",
+      "data": {
+        "list": [{
+          "logo": "",
+          "name": "Bithumb",
+          "price": "1383.18",
+          "changeStat": "up",
+          "changeValue": "2.23",
+          "cap": "620.88",
+          "volume": "956.05"
+        },
+        {
+          "logo": "",
+          "name": "Bithumb",
+          "price": "1383.18",
+          "changeStat": "up",
+          "changeValue": "2.23",
+          "cap": "620.88",
+          "volume": "956.05"
+        },
+        {
+          "logo": "",
+          "name": "Bithumb",
+          "price": "1383.18",
+          "changeStat": "up",
+          "changeValue": "2.23",
+          "cap": "620.88",
+          "volume": "956.05"
+        }]
+      }
+    },
+    "getWikiTheme":{
+    "code": "200",
+    "msg": "Successful",
+    "data": {
+      "list": [
+            {
+              "channelName": "lynn",
+              "channelId": 200,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨に関する規制",
+              "channelId": 196,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 0
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 60
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 80
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 30
+            },
+            {
+              "channelName": "仮想通貨",
+              "channelId": 150,
+              "count": 20
+            }
+        ]
+      }
+    },
+    "getWikiList":{
+      "Intro":"モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所",
+      "list":[
+        {
+          "id": 1917,
+          "conermarkTitle" : "初心者入門",
+          "seoDesc" : "8888888",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        },
+        {
+          "id": 1918,
+          "conermarkTitle" : "初心者入門",
+          "seoDesc" : "8888888",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        },
+        {
+          "id": 1919,
+          "conermarkTitle" : "買う方法",
+          "seoDesc" : "8888888",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        }
+      ]
+    },
+    "wikiTagList":{
+      "code": "200",
+      "msg": "Successful",
+      "list":[
+        {
+          "id": 1917,
+          "conermarkTitle" : "初心者入門",
+          "seoDesc" : "仮想通貨、ビットフライヤーなど登録６社に改善命令仮想通貨、ビットフライヤーなど登録６社に改善命令仮想通貨、ビットフライヤーなど登録６社に改善命令仮想通貨、ビットフライヤーなど登録６社に改善命令",
+          "title": "仮想通貨、ビットフライヤーなど登録６社に改善命令"
+        },
+        {
+          "id": 1918,
+          "conermarkTitle" : "初心者入門",
+          "seoDesc" : "仮想通貨、ビットフライヤーなど登録６社に改善命令",
+          "title": "モナコイン（Monacoin）を安仮想通貨、ビットフライヤーなど登録６社に改善命令通貨取引所"
+        },
+        {
+          "id": 1919,
+          "conermarkTitle" : "買う方法",
+          "seoDesc" : "買う方法買う方法買う方法買う方法買う方法vv",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        },
+        {
+          "id": 1919,
+          "conermarkTitle" : "",
+          "seoDesc" : "買う方法買う方法買う方法買う方法買う方法vv",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        },
+        {
+          "id": 1919,
+          "conermarkTitle" : "",
+          "seoDesc" : "",
+          "title": "モナコイン（Monacoin）を安く買う方法（購入）とおすすめの仮想通貨取引所"
+        }
+      ]
+    },
+    "wikiDetails":{
+        "code" : "200",
+        "msg" : "Successful",
+        "data" : {
+          "id" : 1932,
+          "title" : "は劇的な変動を経験しており、市場動向に注意すべき】現在ETHの価格は¥1952.67であり、1時間の変化が¥21.88を超えて、劇的な変動を経験している。市場動向に注意し、リスクをコントロールすべき。",
+          "conermarkId" : 36,
+          "conermarkTitle" : "市場動向",
+          "seoDesc" : "しており、市場動向に注意すべきしており、市場動向に注意すべき",
+          "timestamp" : 1538217576000,
+          "statement" : "",
+          "text" : "<p><span style=\"font-family: batang;\"></span></p><p><img src=\"//media.thedbit.com/dailymedia/pro/image/5a9800fab4cd4ed7b8a3008229f8cf9c/9173242833781159\" title=\"\" alt=\"6222f8f2-a7cf-4bb9-8807-fc1d096f7d8f_540.png\"/></p><p><span style=\"font-family: batang;\"><br/></span></p><p><span style=\"font-family: batang;\">암호화폐 채굴기 업체인 비트메인(Bitmain)이 올해 1분기에만 1조원이 넘는 영업이익을 달성한 것으로 나타났다.</span></p><p><br/><span style=\"font-family: batang;\"></span></p><p><span style=\"font-family: batang;\">31일(현지 시간) 경제전문지 포춘은 “비트메인이 지난 1분기 동안 11억 달러에 달하는 영업이익을 기록했다”며 “올 한 해 동안 20억 달러에서 30억 달러에 이르는 영업이익을 거둘 것 ”이라고 보도했다. 이는 지난해 실적을 훌쩍 뛰어넘는 수준이다. 비트메인은 지난해 매출 25억 달러, 영업이익 12억 달러를 기록했다.</span></p><p><br/></p><p><span style=\"font-family: batang;\">비트메인의 1분기 실적은 세계 최대 그래픽 카드 생산업체인 엔비디아와 비슷한 수준이다. 엔비디아는 지난 1분기에 12억 달러의 순익을 거뒀고, 현재 시가총액은 1500억 달러 수준이다.</span></p><p><span style=\"font-family: batang;\"><br/></span></p><p><span style=\"font-family: batang;\"></span></p><p style=\"white-space: normal;\"><span style=\"font-family: batang;\">한편, 비트메인은 상장을 준비 중이다. 오는 8월30일 홍콩 거래소에 상장 신청서를 제출하고 연말까지 상장을 끝마친다는 계획이다.</span></p><div><span style=\"font-family: batang;\"><br/></span></div><p><span style=\"font-family: batang;\"><br/></span><br/></p><p><span style=\"font-family: batang;\"><br/></span></p>",
+          "author" : "",
+          "newsEditor" : "",
+          "tags" : [
+              {
+              "id" : 3861,
+              "name" : "123"
+              } ,
+              {
+              "id" : 3862,
+              "name" : "取引業者"
+              },
+              {
+                "id" : 3866,
+                "name" : "市場動向"
+              },
+              {
+                "id" : 3868,
+                "name" : "市場動向"
+              },
+            {
+              "id" : 3868,
+              "name" : "市場動向"
+            },
+            {
+              "id" : 3868,
+              "name" : "市場動向"
+            },
+            {
+              "id" : 3868,
+              "name" : "市場動向"
+            },
+            {
+              "id" : 3868,
+              "name" : "市場動向"
+            },
+            {
+              "id" : 3868,
+              "name" : "市場動向"
+            }
+            ],
+          "preNews" : {
+            "id" : 1931,
+            "title" : "【BTCは劇的な変動を経験しており、市場動向に注意すべき】現在BTCの価格は¥43981.83であり、1時間の変化が¥527.28を超えて、劇的な変動を経験している。市場動向に注意し、リスクをコントロールすべき。"
+          },
+          "nextNews" : {
+            "id" : 1933,
+            "title" : "dsjvdfhbvhdfvjjkl"
+          },
+          "readNumber" : 0,
+          "languageId" : "152",
+          "labelNames" : "123",
+          "channelNames" : "新着",
+          "detailImgUrl" : "04.jpg",
+          "detailImgAlt" : ""
+        }
+    }
+  }
+  

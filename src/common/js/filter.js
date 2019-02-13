@@ -1,5 +1,37 @@
 import Vue from 'vue'
+const moment  = require('moment')
 
+/*
+* 详情页发布时间
+* */
+export function detailsReleaseTime(date,judgment) {
+    let onlyTime
+    switch(judgment) {
+      case "kr" :
+        //2018-03-05 11:00 (不区分AM和PM，使用二十四小时制）
+        moment.locale('ko');
+        onlyTime =moment(date).format("YYYY-MM-DD  HH:mm");
+        break;
+      case "jp" :
+        //2018/05/20  11:00 AM（区分AM和PM）
+        moment.locale('ja');
+        onlyTime =moment(date).format("YYYY/MM/DD  HH:mm A");
+        break;
+      case "ru" :
+        //5 мар. 2018 г. 11:00 （俄罗斯采用24小时时间制）
+        moment.locale('ru');
+        onlyTime =moment(date).format("DD MMM YYYY [г.]  HH:mm");
+        break;
+    }
+    return onlyTime
+}
+/*
+* 快讯列表时间
+* */
+export function birefListTime(date) {
+let time = moment(date).format('HH:mm')
+return time.replace('|','at')
+}
 
 export function PrecentFilter(num) {
   if(!num) return '-'
@@ -92,9 +124,11 @@ export function  setString(str, len,showEllipsis) {
 }
 
 const filters = {
-  setString: setString,
-  PrecentFilter: PrecentFilter,
-  formatDouble: formatDouble
+    setString: setString,
+    PrecentFilter: PrecentFilter,
+    formatDouble: formatDouble,
+    detailsReleaseTime: detailsReleaseTime,
+    birefListTime:birefListTime
 }
 
 Object.keys(filters).forEach(key => {
