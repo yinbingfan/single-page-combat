@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import routes from './router/router'
 import FastClick from 'fastclick'
 import VueI18n from 'vue-i18n'
+import './common/js/filter'
+import   './common/js/mixin'
 import './assets/css/normalize.css' 
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
