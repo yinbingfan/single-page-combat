@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router/router'
 import FastClick from 'fastclick'
 import VueI18n from 'vue-i18n'
+import './assets/css/normalize.css' 
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
         FastClick.attach(document.body);
@@ -27,20 +28,23 @@ const router = new VueRouter({
 })
 Vue.use(VueI18n)
 
-export default ({ app, store }) => {
-    app.i18n = new VueI18n({
-        locale: store.state.locale,
-        fallbackLocale: store.state.locale,
-        messages: {
-            // 'en': require('~/locales/en.json')
-            // 'ja': require('~/locales/ja.json'),
-            // 'ko': require('~/locales/ko.json'),
-            // 'zh': require('~/locales/zh.json')
-        }
-    })
+window.bus = new Vue();
 
-}
+
+const i18n = new VueI18n({
+    locale: 'zh',
+    // fallbackLocale: store.state.locale,
+    messages: {
+        'en': require('./locales/en.json'),
+        'ja': require('./locales/ja.json'),
+        'ko': require('./locales/ko.json'),
+        'zh': require('./locales/zh.json')
+    }
+})
+
+
 new Vue({
     router,
-  render: h => h(App),
+    i18n,
+    render: h => h(App),
 }).$mount('#app')

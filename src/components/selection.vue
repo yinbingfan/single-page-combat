@@ -1,9 +1,5 @@
 <template>
-  <div class="header">
-     <div class="header-nav">
-       首页
-     </div>
-     <div class="header-nav" @click="nav">
+    <div class="header-nav" @click="nav">
        服务
          <div   v-if="isShow">
              <div
@@ -13,24 +9,12 @@
                  <div @click="navMenu(item.id)">{{item.name}}</div>
              </div>
          </div>
-
      </div>
-     <div class="header-nav">
-       案列
-     </div>
-     <div class="header-nav">
-        我们
-     </div>
-  </div>
 </template>
-
 <script>
+import eventBut from '../common/js/eventBus.js';  
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-    data(){
+     data(){
         return{
             isShow:false,
             items:[
@@ -41,34 +25,24 @@ export default {
             ]
         }
     },
-    methods:{
-        navMenu(){
-        },
-        nav(e){
-            e.preventDefault()
+     mounted(){
+        eventBut.$on('getTarget',()=>{
+             this.isShow=false
+        })      
+    },
+    methods: {
+         nav(){
+            eventBut.$emit('getTarget');   
             this.isShow=!this.isShow
+        },
+        navMenu(){
+
         }
     }
 }
 </script>
-
-<style lang="less" scoped>
-*{
-    margin: 0;
-    padding: 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.header{
+<style lang='less' scope>
+    .header{
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -84,5 +58,4 @@ a {
   }
 
 }
-
 </style>
