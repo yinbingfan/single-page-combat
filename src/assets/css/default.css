@@ -1,0 +1,17 @@
+
+/* 指针事件允許您指定鼠标如何与其触摸的元素进行交互。 要禁用按钮上的默认指针事件 */
+
+.button-disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* 
+当触发<select>的下拉列表时，为了避免表单元素在移动浏览器（IOS Safari 等等）上的缩放，加上font-size：
+*/
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+ font-size: 16px;
+}
