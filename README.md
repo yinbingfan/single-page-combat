@@ -1,5 +1,5 @@
 # 单页面
-## 涉及的技术点 axios、语言国际化、moment、vuex 
+## 涉及的技术点 axios、语言国际化、moment、vuex 、eventBus
 
 ## Project setup
 ```
