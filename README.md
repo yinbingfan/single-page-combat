@@ -1,4 +1,5 @@
-# hello-world
+# 单页面
+## 涉及的技术点 axios、语言国际化、moment、vuex 
 
 ## Project setup
 ```
