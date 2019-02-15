@@ -6,7 +6,7 @@
                  v-for="(item,key) in items" :key="key"
                  class="nav-menu"
              >
-                 <div @click="navMenu(item.id)">{{item.name}}</div>
+                 <div @click="navMenu(item.id)" >{{item.name}}</div>
              </div>
          </div>
      </div>
@@ -18,7 +18,7 @@ export default {
         return{
             isShow:false,
             items:[
-                {id:0,name:'营销'},
+                {id:0,name:`720 \u00B0`},
                 {id:1,name:'视频'},
                 {id:2,name:'硬盘'},
                 {id:3,name:'流量'}

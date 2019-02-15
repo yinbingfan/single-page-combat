@@ -1,12 +1,16 @@
 <template>
     <div>
-
+      <social-share/>      
     </div>
 </template>
 
 <script>
+import socialShare from '../components/share.vue'
     export default {
-        name: "home"
+        name: "home",
+         components: {
+             socialShare
+         }
     }
 </script>
 

@@ -10,6 +10,9 @@
             <img src="" alt="">
         </div>
         <div class="time">{{time|birefListTime}}</div>
+        <div class="header-nav" @click='goToHome'>
+         首页
+        </div>
     </div>
 </template>
 <script>
@@ -18,6 +21,12 @@ export default {
         return{
             num:66666666666,
             time:1550045424
+        }
+    },
+    methods:{
+         goToHome(){
+            console.log(9999)
+            this.$router.push('/index')
         }
     }
 }

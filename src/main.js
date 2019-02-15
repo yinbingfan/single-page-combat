@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router/router'
 import FastClick from 'fastclick'
 import VueI18n from 'vue-i18n'
+import SocialSharing from 'vue-social-sharing'
 import './common/js/filter'
 import './common/js/mixin'
 import './assets/css/normalize.css' 
@@ -24,17 +25,13 @@ document.addEventListener('touchstart', function(event) {
     }
 }, false);
 Vue.config.productionTip = false
-
 Vue.use(VueRouter)
-
 const router = new VueRouter({
     routes
 })
 Vue.use(VueI18n)
-
+Vue.use(SocialSharing)
 window.bus = new Vue();
-
-
 const i18n = new VueI18n({
     locale: 'zh',
     // fallbackLocale: store.state.locale,
@@ -45,8 +42,6 @@ const i18n = new VueI18n({
         'zh': require('./locales/zh.json')
     }
 })
-
-
 new Vue({
     router,
     i18n,
