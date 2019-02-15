@@ -25,8 +25,8 @@ export default {
     },
     methods:{
          goToHome(){
-            console.log(9999)
-            this.$router.push('/index')
+        
+            this.$router.push('/pages/index')
         }
     }
 }
