@@ -122,13 +122,77 @@ export function  setString(str, len,showEllipsis) {
   }
   return s;
 }
+/*
+* 手机号码中间四位用*代替
+* */
+export function encryptPhone(val){
+  if(!val) return;
+  return val.replace(/^(\d{3})(\d{4})(\d+)/, '$1****$3')
+}
+/*
+* 格式化金额
+* */
+export function FormattedAmount(val){
+  if(!val) return;
+  return val.toString().replace(/(?=\B(?:\d{3})+\b)(\d{3}(?:\.\d+$)?)/g,',$1')
+}
+/*
+* 不允许输入如下字符: (像 !@#$%^& 等)*
+* */
+
+export function CheckUserNameFormat(userName) {
+  let first = userName.charCodeAt(0);
+  if ((first >= 65 && first <= 90) || (first >= 97 && first <= 122)) {
+    let pattern = /^[A-Za-z0-9_]+$/;  //首字母必须是A-Z或者a-z
+    if (pattern.test(userName)) {
+      return userName
+    } else {
+      return '请输入合法的用户名'
+    }
+  }
+}
+export function qi() {
+  // 匹配中文字符：[\u4e00-\u9fa5]
+  //   //匹配正整数
+  //   return val.replace(/^[1-9]\d*$/,'')
+  //   //匹配负数
+  //   return val.replace(/^-[1-9]\d*$/,'')
+  // //正数
+  // ^-?[1-9]\d*$
+
+  // //匹配非负正数（正整数 + 0）
+  // ^[1-9]\d*|0$
+
+  // //匹配非正负数（负整数 + 0）
+  // ^-[1-9]\d*|0$
+
+  // //匹配正浮点数
+  // ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$
+
+  // //匹配负浮点数
+  // ^-[1-9]\d*\.\d*|-0\.\d*[1-9]\d*$
+
+  //身份证
+  //^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X|x)$
+
+  //6 - 16位字符，区分大小写（不能是9位以下的纯数字，不含空格）:
+  //^ (? !\d{ 6, 8 } $) (? ! )(?=.* [a - z])(?=.* [0 - 9])[a - zA - Z0 -9_]{ 6, 16 } $
+
+  //6-16位字符，区分大小写（不能是9位以下的纯数字，不含空格），必须包含大写字母:
+  //^ (? !\d{ 6, 8 } $) (? ! )(?=.* [A - Z])(?=.* [a - z])(?=.* [0 - 9])[a - zA - Z0 -9_]{ 6, 16 } $
+
+  //密码不能为纯数字或字母，不少于6位:
+  //^ (? ![0 - 9] + $)(?![a - zA - Z] + $)[0 - 9A - Za - z]{ 6,} $
+}
 
 const filters = {
     setString: setString,
     PrecentFilter: PrecentFilter,
     formatDouble: formatDouble,
     detailsReleaseTime: detailsReleaseTime,
-    birefListTime:birefListTime
+    birefListTime: birefListTime,
+    FormattedAmount:FormattedAmount,
+    encryptPhone:encryptPhone
 }
 
 Object.keys(filters).forEach(key => {

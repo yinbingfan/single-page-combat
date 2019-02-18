@@ -13,6 +13,12 @@
         <div class="header-nav" @click='goToHome'>
          跳转HOME
         </div>
+        <div>
+            {{phone |encryptPhone}}
+        </div>
+        <div>
+            {{num|FormattedAmount}}
+        </div>
     </div>
 </template>
 <script>
@@ -21,7 +27,8 @@ export default {
     data(){
         return{
             num:66666666666,
-            time:1550045424
+            time:1550045424,
+            phone:'13572314175'
         }
     },
     methods:{
