@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import socialShare from '../components/share.vue'
+    import socialShare from '../components/share.vue'
     export default {
         name: "home",
          components: {

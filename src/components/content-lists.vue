@@ -11,7 +11,7 @@
         </div>
         <div class="time">{{time|birefListTime}}</div>
         <div class="header-nav" @click='goToHome'>
-         首页
+         跳转HOME
         </div>
     </div>
 </template>
