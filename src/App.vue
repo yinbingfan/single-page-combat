@@ -1,35 +1,13 @@
 <template>
   <div id="app">
-    <layout/>
-    <content-lists/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import layout from './components/layout.vue'
-import contentLists from './components/content-lists.vue'
+
 export default {
-  name: 'app',
-  components: {
-    layout,
-    contentLists
-  },
-  data(){
-    return{
-      CategoryList:[]
-    }
-  },
-  mounted(){
-    this.getCategory()
-  },
-  methods:{
-    async getCategory() {
-          let Category = await this.$store.dispatch('FETCH_BANNER', {
-            // langCode:this.$store.state.locale
-          });
-          this.CategoryList = Category.data
-    },
-  }
+  name: 'app'
 }
 </script>
 
