@@ -72,7 +72,7 @@ export const loadMore = (element, callback) => {
 
     //运动结束时判断是否有惯性运动，惯性运动结束判断是非到达底部
     element.addEventListener('touchend',() => {
-       	oldScrollTop = document.body.scrollTop;
+       	oldScrollTop = document.body.scrollTop
        	moveEnd();
     },{passive: true})
     
@@ -83,8 +83,7 @@ export const loadMore = (element, callback) => {
                 loadMore();
                 moveEnd();
             }else{
-            	cancelAnimationFrame(requestFram);
-            	//为了防止鼠标抬起时已经渲染好数据从而导致重获取数据，应该重新获取dom高度
+            	cancelAnimationFrame(requestFram)
             	height = element.offsetHeight;
                 loadMore();
             }
