@@ -33,11 +33,15 @@ export default {
             s:[{
                 a:'name',
                 b:'age'
-            }]
+            }],
+            b:{
+                a:1
+            }
         }
     },
     mounted(){
         this.aa(this.s)
+
     },
     methods:{
          goToHome(){
@@ -46,7 +50,7 @@ export default {
         aa(value){
        
             console.log(value instanceof Object);
-              
+            console.log(this.b.a);
         }
 
     }
