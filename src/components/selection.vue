@@ -28,7 +28,8 @@ export default {
      mounted(){
         eventBut.$on('getTarget',()=>{
              this.isShow=false
-        })      
+        })  
+      
     },
     methods: {
          nav(){
@@ -36,7 +37,7 @@ export default {
             this.isShow=!this.isShow
         },
         navMenu(){
-
+            
         }
     }
 }

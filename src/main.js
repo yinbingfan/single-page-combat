@@ -9,6 +9,9 @@ import './common/js/filter'
 import './common/js/mixin'
 import './assets/css/normalize.css' 
 import  store  from './store/index.js'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
@@ -30,6 +33,7 @@ const router = new VueRouter({
     routes
 })
 Vue.use(VueI18n)
+Vue.use(ElementUI)
 Vue.use(SocialSharing)
 window.bus = new Vue();
 const i18n = new VueI18n({

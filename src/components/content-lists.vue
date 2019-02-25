@@ -13,12 +13,13 @@
         <div class="header-nav" @click='goToHome'>
          跳转HOME
         </div>
-        <div>
+        <div class='phone'>
             {{phone |encryptPhone}}
         </div>
         <div>
             {{num|FormattedAmount}}
         </div>
+        <i class="el-icon-delete"></i>
     </div>
 </template>
 <script>
@@ -28,13 +29,26 @@ export default {
         return{
             num:66666666666,
             time:1550045424,
-            phone:'13572314175'
+            phone:'13572314175',
+            s:[{
+                a:'name',
+                b:'age'
+            }]
         }
+    },
+    mounted(){
+        this.aa(this.s)
     },
     methods:{
          goToHome(){
             this.$router.push('/home')
+        },
+        aa(value){
+       
+            console.log(value instanceof Object);
+              
         }
+
     }
 }
 </script>
@@ -56,5 +70,8 @@ export default {
                   background-size: 100% 100%;
                 }
               }
-            }    
+            } 
+            .phone{
+                background: rgba(0,152,231,.2)
+            }   
 </style>
