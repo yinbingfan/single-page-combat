@@ -9,16 +9,26 @@
     "api": "cd api/json && json-server -p 8888 -w route.json"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "css-loader": "^3.2.0",
     "element-ui": "^2.5.4",
     "fastclick": "^1.0.6",
+    "file-saver": "^2.0.2",
+    "iview": "^3.5.1",
+    "jszip": "^3.2.2",
     "moment": "^2.24.0",
+    "style-loader": "^1.0.0",
+    "view-design": "^4.0.2",
     "vue": "^2.5.21",
     "vue-axios": "^2.1.4",
+    "vue-baberrage": "^2.1.9",
+    "vue-echart": "^1.0.5",
     "vue-i18n": "^8.8.1",
     "vue-router": "^3.0.2",
     "vue-social-sharing": "^2.3.4",
-    "vuex": "^3.1.0"
+    "vue-tree-navigation": "^4.0.1",
+    "vuex": "^3.1.0",
+    "xlsx": "^0.15.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.0",
@@ -30,6 +40,8 @@
     "eslint-plugin-vue": "^5.1.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "normalize.css": "^8.0.1",
+    "script-loader": "^0.7.2",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
