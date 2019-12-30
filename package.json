@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "api": "cd api/json && json-server -p 8888 -w route.json"
@@ -11,10 +12,12 @@
   "dependencies": {
     "axios": "^0.18.1",
     "css-loader": "^3.2.0",
+    "echarts": "^4.5.0",
     "element-ui": "^2.5.4",
     "fastclick": "^1.0.6",
     "file-saver": "^2.0.2",
     "iview": "^3.5.1",
+    "js-cookie": "^2.2.1",
     "jszip": "^3.2.2",
     "moment": "^2.24.0",
     "style-loader": "^1.0.0",
@@ -27,6 +30,7 @@
     "vue-router": "^3.0.2",
     "vue-social-sharing": "^2.3.4",
     "vue-tree-navigation": "^4.0.1",
+    "vuedraggable": "^2.23.2",
     "vuex": "^3.1.0",
     "xlsx": "^0.15.1"
   },
@@ -36,7 +40,7 @@
     "@vue/cli-service": "^3.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
-    "eslint-config-elemefe": "^0.3.0",
+    "eslint- nfig-elemefe": "^0.3.0",
     "eslint-plugin-vue": "^5.1.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",

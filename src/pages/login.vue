@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2019-11-27 16:46:55
- * @LastEditTime: 2019-11-27 17:08:19
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \single-page-combat-master\src\pages\login.vue
- -->
 <template>
   <div class="login-content">
     <h1>login</h1>
@@ -42,7 +34,6 @@
         <el-link href="#" target="_blank">隐私</el-link>
         <el-link href="#" target="_blank">条款</el-link>
       </div>
-      <p>Copright@2019联通系统集成西研出品</p>
     </div>
   </div>
 </template>
@@ -103,7 +94,6 @@ export default {
         if (valid) {
           alert("submit!");
         } else {
-          console.log("error submit!!");
           return false;
         }
       });
