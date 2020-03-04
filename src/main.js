@@ -37,7 +37,8 @@ document.addEventListener('touchstart', function (event) {
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history'
 })
 Vue.use(VueI18n)
 Vue.use(ElementUI)

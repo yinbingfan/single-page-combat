@@ -30,5 +30,9 @@ export default [{
             path: '/reducePage',
             component: (resolve) => require(['../pages/reducePage.vue'], resolve)
         },
+        {
+            path: '/viewRender',
+            component: (resolve) => require(['../pages/viewRender.vue'], resolve)
+        },
     ]
 }]

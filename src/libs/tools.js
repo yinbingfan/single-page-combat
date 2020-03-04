@@ -112,7 +112,7 @@ export const get_time = () => {
     return dateStr
 }
 // 
-export const userDepartData = (soure, id, parentId, children) => {
+export const userDepartData = (soure, id, parentId) => {
     soure.map((item, index) => {
         if (item.parentId) {
             delete soure[index]
@@ -126,6 +126,22 @@ export const userDepartData = (soure, id, parentId, children) => {
         return father[parentId] === 1
     })
 }
+
+export const handleData = (source, id, parentId, children) => {
+    return source.filter(father => {
+        if (father[id] && father[parentId] === null) {
+            let branchArr = source.filter(child => father[id] === child[parentId]);
+            if (branchArr.length > 0) {
+                father[children] = branchArr
+            }
+            if (father.list && father.list.length > 0) {
+                return father
+            }
+        }
+    })
+
+}
+
 /* 禁止复制 */
 // onpaste='return false'
 
@@ -283,4 +299,34 @@ export const isNumber = (s) => {
         }
     }
     return s
+}
+
+export const sortByKey = (array, key) => {
+    return array.sort((a, b) => {
+        let x = a[key];
+        let y = b[key];
+        return ((x < y) ? -1 : (x > y) ? 1 : 0)
+    })
+}
+
+
+
+export const uniqueArray = (array, key) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i][key] === array[j][key]) {
+                array[i] = Object.assign(array[i], array[j])
+            }
+        }
+    }
+    var result = []
+    var json_arr = []
+    for (let i = 0; i < array.length; i++) {
+        if (result.indexOf(array[i][key]) === -1) {
+            result.push(array[i][key]);
+            json_arr.push(array[i])
+        }
+    }
+
+    return json_arr
 }

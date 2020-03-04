@@ -1,6 +1,6 @@
 <template>
   <div>
-    <draggable class="drop-box" v-model="dropList" tag="div" v-on:options="option">
+      <draggable class="drop-box" v-model="dropList" tag="div" v-on:options="option">
       <div v-for="(item,index) in dropList" :key="index">{{item.name}}</div>
     </draggable>
   </div>
