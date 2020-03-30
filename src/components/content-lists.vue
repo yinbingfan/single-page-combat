@@ -8,15 +8,17 @@
  -->
 <template>
   <div>
-    <div>{{num | formatDouble}}</div>
-    <div :style="{backgroundColor:setColor(1),'color':setFontColor(2)}">黄河</div>
+    <div>{{ num | formatDouble }}</div>
+    <div :style="{ backgroundColor: setColor(1), color: setFontColor(2) }">
+      黄河
+    </div>
     <div class="product-image-wrapper">
       <img src alt />
     </div>
-    <div class="time">{{time|birefListTime}}</div>
+    <div class="time">{{ time | birefListTime }}</div>
     <div class="header-nav" @click="goToHome">跳转HOME</div>
-    <div class="phone">{{phone |encryptPhone}}</div>
-    <div>{{num|FormattedAmount}}</div>
+    <div class="phone">{{ phone | encryptPhone }}</div>
+    <div>{{ num | FormattedAmount }}</div>
     <i class="el-icon-delete"></i>
   </div>
 </template>
@@ -38,16 +40,10 @@ export default {
       }
     };
   },
-  mounted() {
-    this.aa(this.s);
-  },
+  mounted() {},
   methods: {
     goToHome() {
       this.$router.push("/home");
-    },
-    aa(value) {
-      console.log(value instanceof Object);
-      console.log(this.b.a);
     }
   }
 };

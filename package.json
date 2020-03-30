@@ -38,7 +38,7 @@
     "babel-eslint": "^10.0.1",
     "babel-polyfill": "^6.26.0",
     "eslint": "^5.8.0",
-    "eslint- nfig-elemefe": "^0.3.0",
+    "eslint-config-elemefe": "^0.3.0",
     "eslint-plugin-vue": "^5.1.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",

@@ -40,7 +40,6 @@ export default {
       this.editorText = val;
     },
     onContentChange2(val) {
-      console.log(val);
       this.editorText2 = val;
     },
     afterChange() {}

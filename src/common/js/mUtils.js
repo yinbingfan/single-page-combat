@@ -407,7 +407,7 @@ export function validateIdNo(rule, value,callback) {
 //是否为手机号或者固话
 
 export function validatePhoneTwo(rule, value, callback) {
-    const reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;;
+    const reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;
     if (value == '' || value == undefined || value == null) {
         callback();
     } else {

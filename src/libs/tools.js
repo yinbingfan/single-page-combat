@@ -88,7 +88,7 @@ export const dateFormatter = (t) => {
     date = checkAddZone(date);
     var hour = t.getHours();
     hour = checkAddZone(hour);
-    var min = t.getMinutes();
+    // var min = t.getMinutes();
     return year + '-' + month + '-' + date + '-' + hour
 }
 
@@ -111,18 +111,19 @@ export const get_time = () => {
     }
     return dateStr
 }
-// 
-export const userDepartData = (soure, id, parentId, children) => {
-    soure.map((item, index) => {
+//
+
+export const userDepartData = (source, id, parentId, children) => {
+    source.map((item, index) => {
         if (item.parentId) {
-            delete soure[index]
+            delete source[index]
         }
     })
 
-    return soure.filter(father => {
+    return source.filter(father => {
         father.value = father.id;
         father.label = father.name;
-        let branchArr = soure.filter(child => father[id] === child[parentId]);
+        let branchArr = source.filter(child => father[id] === child[parentId]);
         return father[parentId] === 1
     })
 }

@@ -44,8 +44,7 @@ const router = new VueRouter({
 Vue.use(VueI18n)
 Vue.use(ElementUI)
 Vue.use(SocialSharing)
-Vue.use(iview)
-Vue.use(vueBaberrage) //弹幕
+// Vue.use(vueBaberrage) //弹幕
 window.bus = new Vue();
 const i18n = new VueI18n({
     locale: 'zh',

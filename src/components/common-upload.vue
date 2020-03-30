@@ -26,10 +26,18 @@
               <span style="color:#FFFFFF">开始上传</span>
             </el-button>
           </el-form-item>
-          <el-form-item label="文件列表" class="fileList" v-show=" files.length>0">
+          <el-form-item
+            label="文件列表"
+            class="fileList"
+            v-show="files.length > 0"
+          >
             <ul class="el-upload-list el-upload-list--text">
-              <li class="el-upload-list__item is-ready" v-for="(file,index) in files" :key="index">
-                <span>{{file.name}}</span>
+              <li
+                class="el-upload-list__item is-ready"
+                v-for="(file, index) in files"
+                :key="index"
+              >
+                <span>{{ file.name }}</span>
               </li>
             </ul>
           </el-form-item>
@@ -60,7 +68,7 @@ export default {
         const extension = newFile.name.substring(
           newFile.name.lastIndexOf(".") + 1
         );
-        console.log(extension);
+
         if (extension == "pdf" || extension == "PDF") {
         } else {
           this.$message({
@@ -77,25 +85,20 @@ export default {
 
         // 开始上传
         if (newFile.active !== oldFile.active) {
-          console.log("Start uploa3333333333333333d", newFile.size);
-          console.log("Start upload", newFile.active, newFile);
           this.isXls = false;
         }
 
         // 上传进度
         if (newFile.progress !== oldFile.progress) {
-          console.log("progress", newFile.progress, newFile);
         }
 
         // 上传错误
         if (newFile.error !== oldFile.error) {
-          console.log("error", newFile.error, newFile);
           this.$message({ message: "上传失败!", type: "error" });
         }
 
         // 上传成功
         if (newFile.success !== oldFile.success) {
-          console.log("success", newFile.success, newFile);
           this.$message({ message: "上传成功!", type: "success" });
         }
       }
