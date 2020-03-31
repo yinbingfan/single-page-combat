@@ -1,3 +1,5 @@
+// import 'babel-polyfill'
+// import Promise from 'es6-promise'
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
@@ -15,10 +17,12 @@ import VueKindEditor from 'vue-kindeditor'
 import 'kindeditor/kindeditor-all-min.js'
 import 'kindeditor/themes/default/default.css'
 Vue.use(VueKindEditor)
+// Promise.polyfill()
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 Vue.use(VueRouter);
 Vue.use(ViewUI);
+import axios from 'axios'
 //解决IE中，elementUI的input删除操作无法触发数据变动监听
 import oninputPolyfill from 'ie9-oninput-polyfill';
 Vue.use(oninputPolyfill);
@@ -56,9 +60,11 @@ const i18n = new VueI18n({
         'zh': require('./locales/zh.json')
     }
 })
-
-
-
+Vue.directive('loaded-callback', {
+    inserted: function (el, binding, vnode) {
+        binding.value(el, binding, vnode)
+    }
+})
 //无法获取未定义或 null 引用的属性“remove”
 //错误信息：无法获取未定义或 null 引用的属性“add”
 //解决iview在IE9中list方法报错的问题

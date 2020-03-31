@@ -8,7 +8,9 @@
       :content="editorText"
       :afterChange="afterChange()"
       pluginsPath="/static/kindeditor/plugins/"
-      :loadStyleMode="false"
+      :loadStyleMode="true"
+      :allowFileManager="true"
+      uploadJson="../../static/kindeditor/php/upload_json.php"
       @on-content-change="onContentChange"
     ></editor>
 
