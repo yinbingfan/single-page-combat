@@ -4,6 +4,7 @@ import index from '../pages/index'
 import login from '../pages/login'
 import editor from '../pages/editor'
 import kind from '../pages/kind'
+import press from '../pages/press'
 // const home = r => require.ensure([], () => r(require('../pages/home')), 'home')
 export default [{
     path: '/',
@@ -39,6 +40,10 @@ export default [{
     {
         path: '/kind',
         component: kind
+    },
+    {
+        path: '/press',
+        component: press
     }
     ]
 }]
