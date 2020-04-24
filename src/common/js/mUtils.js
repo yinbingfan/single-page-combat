@@ -63,18 +63,18 @@ export const loadMore = (element, callback) => {
         setTop = element.offsetTop;
         paddingBottom = getStyle(element, 'paddingBottom');
         marginBottom = getStyle(element, 'marginBottom');
-    }, {passive: true})
+    }, { passive: true })
 
     //运动过程中保持监听 scrollTop 的值判断是否到达底部
     element.addEventListener('touchmove', () => {
         loadMore();
-    }, {passive: true})
+    }, { passive: true })
 
     //运动结束时判断是否有惯性运动，惯性运动结束判断是非到达底部
     element.addEventListener('touchend', () => {
         oldScrollTop = document.body.scrollTop
         moveEnd();
-    }, {passive: true})
+    }, { passive: true })
 
     const moveEnd = () => {
         requestFram = requestAnimationFrame(() => {
@@ -109,16 +109,16 @@ export const showBack = callback => {
     }, false)
     document.addEventListener('touchstart', () => {
         showBackFun();
-    }, {passive: true})
+    }, { passive: true })
 
     document.addEventListener('touchmove', () => {
         showBackFun();
-    }, {passive: true})
+    }, { passive: true })
 
     document.addEventListener('touchend', () => {
         oldScrollTop = document.body.scrollTop;
         moveEnd();
-    }, {passive: true})
+    }, { passive: true })
 
     const moveEnd = () => {
         requestFram = requestAnimationFrame(() => {
@@ -414,7 +414,6 @@ export function validateIdNo(rule, value, callback) {
 
 export function validatePhoneTwo(rule, value, callback) {
     const reg = /^((0\d{2,3}-\d{7,8})|(1[34578]\d{9}))$/;
-    ;
     if (value == '' || value == undefined || value == null) {
         callback();
     } else {

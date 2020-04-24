@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      "kindeditor@4.1.10",
+      "E:\\single-page-combat"
+    ]
+  ],
+  "_from": "kindeditor@4.1.10",
+  "_id": "kindeditor@4.1.10",
+  "_inBundle": false,
+  "_integrity": "sha1-u7u6neOOE/hWggW+dl73M5621RU=",
+  "_location": "/kindeditor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "kindeditor@4.1.10",
+    "name": "kindeditor",
+    "escapedName": "kindeditor",
+    "rawSpec": "4.1.10",
+    "saveSpec": null,
+    "fetchSpec": "4.1.10"
+  },
+  "_requiredBy": [
+    "/vue-kindeditor"
+  ],
+  "_resolved": "https://registry.npmjs.org/kindeditor/-/kindeditor-4.1.10.tgz",
+  "_spec": "4.1.10",
+  "_where": "E:\\single-page-combat",
+  "description": "WYSIWYG HTML editor",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compress": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7"
+  },
+  "filename": "kindeditor",
+  "keywords": [
+    "WYSIWYG",
+    "editor"
+  ],
+  "main": "kindeditor-all.js",
+  "name": "kindeditor",
+  "spm": {
+    "main": "kindeditor-all.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "tests": "",
+    "ignore": [
+      "components",
+      "dist",
+      "spm_modules"
+    ],
+    "buildArgs": ""
+  },
+  "version": "4.1.10"
+}

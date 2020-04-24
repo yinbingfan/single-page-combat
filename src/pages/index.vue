@@ -1,16 +1,19 @@
 <template>
   <div>
     <layout />
-    <content-lists ref="child" />
+    <content-lists />
+    <common-form />
   </div>
 </template>
 <script>
 import layout from "../components/layout.vue";
 import contentLists from "../components/content-lists.vue";
+import commonForm from "../components/common-form";
 export default {
   components: {
     layout,
-    contentLists
+    contentLists,
+    commonForm
   },
   data() {
     return {
@@ -26,13 +29,7 @@ export default {
         // langCode:this.$store.state.locale
       });
       this.CategoryList = Category.data;
-    },
-    // 父组件操作子组件方法
-
-    changeChildMethods() {
-      this.$refs.child.goToHome();
     }
   }
 };
 </script>
-
